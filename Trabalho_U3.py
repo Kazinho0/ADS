@@ -3,7 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-conn = sql.connect("dados_vendas.db", timeout=10)
+caminho_db = r'C:\Users\Guilh\projeto\ADS\banco\dados_vendas.db'
+conn = sql.connect(caminho_db, timeout=10)
 cursor = conn.cursor()
 
 cursor.execute('''
@@ -124,8 +125,6 @@ while acao != "10":
 
   elif acao >= '5' and acao != '10':
     print("Digite uma opção valida!")
-
-
 
 
 else:
